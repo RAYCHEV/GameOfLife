@@ -7,6 +7,7 @@ class MatrixManager: ObservableObject {
     @Published var dysplayedString: String = ""
     
     var timer = Timer()
+    var isTimerOn: Bool = false
     
     let rows: Int
     let columns: Int
@@ -15,6 +16,7 @@ class MatrixManager: ObservableObject {
     var matrixTemp: Matrix<Bool>
     
     init(){
+        //TODO:- convert the hardcoder values to UI input
         self.rows = 16
         self.columns = 16
         matrix = Matrix(rows: rows, columns: columns, defaultValue:false)
@@ -23,7 +25,7 @@ class MatrixManager: ObservableObject {
     }
     
     func matrixInit() {
-
+        //TODO:- convert the hardcoder values to UI input
         matrixTemp[10,10] = true
         matrixTemp[10,11] = true
         matrixTemp[10,12] = true
@@ -42,22 +44,27 @@ class MatrixManager: ObservableObject {
     
     func start() {
         
-     
+        //double running of timer is not allowed
+        if isTimerOn {
+            return
+        }
         
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.dysplayedString = self.generateNewMatrixView()
         }
+        isTimerOn = true
     }
     
     func stop() {
         
         timer.invalidate()
+        isTimerOn = false
     }
     
+    // adding the initial values to the game
     func reset() {
         
         self.matrixInit()
-        timer.invalidate()
     }
     
     func generateNewMatrixView() -> String {
