@@ -29,7 +29,6 @@ class MatrixManager: ObservableObject {
         
         //double running of timer is not allowed
         if isTimerOn {
-            stop()
             return
         }
         
