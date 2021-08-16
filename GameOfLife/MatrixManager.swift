@@ -5,40 +5,42 @@ import Combine
 class MatrixManager: ObservableObject {
     
     @Published var dysplayedString: String = ""
+    @Published var addedPoints = ""
     
-    var timer = Timer()
-    var isTimerOn: Bool = false
-    
+    //TODO:- replacing rows, columns with defaultRows, defauldColumns
     let rows: Int
     let columns: Int
+        
+    var timer = Timer()
+    var isTimerOn: Bool = false
     
     var matrix: Matrix<Bool>
     var matrixTemp: Matrix<Bool>
     
-    init(){
+    init(rows: Int = 16, columns: Int = 16){
         //TODO:- convert the hardcoder values to UI input
-        self.rows = 16
-        self.columns = 16
+        self.rows = rows
+        self.columns = columns
         matrix = Matrix(rows: rows, columns: columns, defaultValue:false)
         matrixTemp = Matrix(rows: rows, columns: columns, defaultValue:false)
         matrixInit()
     }
     
     func matrixInit() {
-        //TODO:- convert the hardcoder values to UI input
-        matrixTemp[10,10] = true
-        matrixTemp[10,11] = true
-        matrixTemp[10,12] = true
-        
-        matrixTemp[2,2] = true
-        matrixTemp[3,3] = true
-        matrixTemp[2,3] = true
-        matrixTemp[3,2] = true
-        
-        matrixTemp[4,4] = true
-        matrixTemp[4,5] = true
-        matrixTemp[5,5] = true
-        matrixTemp[5,4] = true
+        //TODO:- convert the hardcoder values to UI input16
+//        matrixTemp[10,10] = true
+//        matrixTemp[10,11] = true
+//        matrixTemp[10,12] = true
+//
+//        matrixTemp[2,2] = true
+//        matrixTemp[3,3] = true
+//        matrixTemp[2,3] = true
+//        matrixTemp[3,2] = true
+//
+//        matrixTemp[4,4] = true
+//        matrixTemp[4,5] = true
+//        matrixTemp[5,5] = true
+//        matrixTemp[5,4] = true
 
     }
     
@@ -46,6 +48,7 @@ class MatrixManager: ObservableObject {
         
         //double running of timer is not allowed
         if isTimerOn {
+            stop()
             return
         }
         
@@ -65,6 +68,29 @@ class MatrixManager: ObservableObject {
     func reset() {
         
         self.matrixInit()
+    }
+    
+    func addPoints(points: String) {
+        let pointsArr = points.split(separator: ".")
+        var pointsArrValidated = [Int]()
+        
+        //validation and casting
+        for i in 0 ..< pointsArr.count {
+            if i % 2 == 0 && isValidMatrixRange(row: Int(pointsArr[i]) ?? -1, col: Int(pointsArr[i + 1]) ?? -1) {
+                pointsArrValidated.append(Int(pointsArr[i]) ?? 0)
+                pointsArrValidated.append(Int(pointsArr[i + 1]) ?? 0)
+
+            }
+        }
+        
+        for i in 0 ..< pointsArr.count {
+            
+            //validation martrix input index
+            if i % 2 == 0 && !(i + 1 >= pointsArrValidated.count) {
+                matrixTemp[pointsArrValidated[i], pointsArrValidated[i+1]] = true
+                
+            }
+        }
     }
     
     func generateNewMatrixView() -> String {
