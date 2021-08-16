@@ -34,7 +34,7 @@ class MatrixManager: ObservableObject {
         }
         
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            self.dysplayedString = self.generateNewMatrixView()
+        self.dysplayedString = self.generateNewMatrixView()
         }
         isTimerOn = true
     }
@@ -48,6 +48,7 @@ class MatrixManager: ObservableObject {
     // resetting matrix with default values
     func reset() {
         matrixTemp = Matrix(rows: rows, columns: columns, defaultValue:false)
+        self.dysplayedString = self.generateNewMatrixView()
 
     }
     
@@ -71,6 +72,9 @@ class MatrixManager: ObservableObject {
                 matrixTemp[pointsArrValidated[i], pointsArrValidated[i+1]] = true
                 
             }
+        }
+        if !isTimerOn {
+            start()
         }
     }
     

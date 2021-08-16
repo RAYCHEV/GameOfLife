@@ -4,7 +4,7 @@ import Combine
 
 
 struct ContentView: View {
-    @StateObject var matrix = MatrixManager(rows: 6, columns: 6)
+    @StateObject var matrix = MatrixManager(rows: 64, columns: 32)
     
     var body: some View {
         ScrollView() {
