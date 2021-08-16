@@ -23,27 +23,8 @@ class MatrixManager: ObservableObject {
         self.columns = columns
         matrix = Matrix(rows: rows, columns: columns, defaultValue:false)
         matrixTemp = Matrix(rows: rows, columns: columns, defaultValue:false)
-        matrixInit()
     }
-    
-    func matrixInit() {
-        //TODO:- convert the hardcoder values to UI input16
-//        matrixTemp[10,10] = true
-//        matrixTemp[10,11] = true
-//        matrixTemp[10,12] = true
-//
-//        matrixTemp[2,2] = true
-//        matrixTemp[3,3] = true
-//        matrixTemp[2,3] = true
-//        matrixTemp[3,2] = true
-//
-//        matrixTemp[4,4] = true
-//        matrixTemp[4,5] = true
-//        matrixTemp[5,5] = true
-//        matrixTemp[5,4] = true
-
-    }
-    
+        
     func start() {
         
         //double running of timer is not allowed
@@ -66,8 +47,7 @@ class MatrixManager: ObservableObject {
     
     // adding the initial values to the game
     func reset() {
-        
-        self.matrixInit()
+
     }
     
     func addPoints(points: String) {
