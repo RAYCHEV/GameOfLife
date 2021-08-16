@@ -45,8 +45,9 @@ class MatrixManager: ObservableObject {
         isTimerOn = false
     }
     
-    // adding the initial values to the game
+    // resetting matrix with default values
     func reset() {
+        matrixTemp = Matrix(rows: rows, columns: columns, defaultValue:false)
 
     }
     
