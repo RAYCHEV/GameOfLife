@@ -13,6 +13,7 @@
 		4D213D0D26C14AC500B22FE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D213D0C26C14AC500B22FE5 /* Preview Assets.xcassets */; };
 		4D24B4E326C274B50016A182 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24B4E226C274B50016A182 /* Matrix.swift */; };
 		4D24B4E526C285520016A182 /* MatrixManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24B4E426C285520016A182 /* MatrixManager.swift */; };
+		4DA1A3FD26DDAC530068FB82 /* ButtonsStartStopResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D213D0E26C14AC500B22FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D24B4E226C274B50016A182 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		4D24B4E426C285520016A182 /* MatrixManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixManager.swift; sourceTree = "<group>"; };
+		4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsStartStopResetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,10 @@
 		4D213D0426C14AC200B22FE5 /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
+				4D5E5EF926D791F80006715D /* Views */,
 				4D24B4E226C274B50016A182 /* Matrix.swift */,
 				4D24B4E426C285520016A182 /* MatrixManager.swift */,
 				4D213D0526C14AC200B22FE5 /* GameOfLifeApp.swift */,
-				4D213D0726C14AC200B22FE5 /* ContentView.swift */,
 				4D213D0926C14AC500B22FE5 /* Assets.xcassets */,
 				4D213D0E26C14AC500B22FE5 /* Info.plist */,
 				4D213D0B26C14AC500B22FE5 /* Preview Content */,
@@ -73,6 +75,31 @@
 				4D213D0C26C14AC500B22FE5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D5E5EF926D791F80006715D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D5E5EFA26D796A80006715D /* GameViews */,
+				4DA1A3FB26DDAC0A0068FB82 /* New Group */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D5E5EFA26D796A80006715D /* GameViews */ = {
+			isa = PBXGroup;
+			children = (
+				4D213D0726C14AC200B22FE5 /* ContentView.swift */,
+				4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */,
+			);
+			path = GameViews;
+			sourceTree = "<group>";
+		};
+		4DA1A3FB26DDAC0A0068FB82 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +173,7 @@
 			files = (
 				4D213D0826C14AC200B22FE5 /* ContentView.swift in Sources */,
 				4D213D0626C14AC200B22FE5 /* GameOfLifeApp.swift in Sources */,
+				4DA1A3FD26DDAC530068FB82 /* ButtonsStartStopResetView.swift in Sources */,
 				4D24B4E526C285520016A182 /* MatrixManager.swift in Sources */,
 				4D24B4E326C274B50016A182 /* Matrix.swift in Sources */,
 			);
