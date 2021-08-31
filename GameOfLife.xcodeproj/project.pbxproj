@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4D213D0626C14AC200B22FE5 /* GameOfLifeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D213D0526C14AC200B22FE5 /* GameOfLifeApp.swift */; };
-		4D213D0826C14AC200B22FE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D213D0726C14AC200B22FE5 /* ContentView.swift */; };
+		4D213D0826C14AC200B22FE5 /* MainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D213D0726C14AC200B22FE5 /* MainGameView.swift */; };
 		4D213D0A26C14AC500B22FE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D213D0926C14AC500B22FE5 /* Assets.xcassets */; };
 		4D213D0D26C14AC500B22FE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D213D0C26C14AC500B22FE5 /* Preview Assets.xcassets */; };
 		4D24B4E326C274B50016A182 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24B4E226C274B50016A182 /* Matrix.swift */; };
 		4D24B4E526C285520016A182 /* MatrixManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24B4E426C285520016A182 /* MatrixManager.swift */; };
 		4DA1A3FD26DDAC530068FB82 /* ButtonsStartStopResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */; };
+		4DA1A3FF26DDAF220068FB82 /* TextFieldAndAddBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1A3FE26DDAF220068FB82 /* TextFieldAndAddBtnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D213D0226C14AC200B22FE5 /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D213D0526C14AC200B22FE5 /* GameOfLifeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeApp.swift; sourceTree = "<group>"; };
-		4D213D0726C14AC200B22FE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4D213D0726C14AC200B22FE5 /* MainGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameView.swift; sourceTree = "<group>"; };
 		4D213D0926C14AC500B22FE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D213D0C26C14AC500B22FE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D213D0E26C14AC500B22FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D24B4E226C274B50016A182 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		4D24B4E426C285520016A182 /* MatrixManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixManager.swift; sourceTree = "<group>"; };
 		4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsStartStopResetView.swift; sourceTree = "<group>"; };
+		4DA1A3FE26DDAF220068FB82 /* TextFieldAndAddBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAndAddBtnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				4D5E5EFA26D796A80006715D /* GameViews */,
-				4DA1A3FB26DDAC0A0068FB82 /* New Group */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,17 +90,11 @@
 		4D5E5EFA26D796A80006715D /* GameViews */ = {
 			isa = PBXGroup;
 			children = (
-				4D213D0726C14AC200B22FE5 /* ContentView.swift */,
+				4D213D0726C14AC200B22FE5 /* MainGameView.swift */,
 				4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */,
+				4DA1A3FE26DDAF220068FB82 /* TextFieldAndAddBtnView.swift */,
 			);
 			path = GameViews;
-			sourceTree = "<group>";
-		};
-		4DA1A3FB26DDAC0A0068FB82 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,11 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D213D0826C14AC200B22FE5 /* ContentView.swift in Sources */,
+				4D213D0826C14AC200B22FE5 /* MainGameView.swift in Sources */,
 				4D213D0626C14AC200B22FE5 /* GameOfLifeApp.swift in Sources */,
 				4DA1A3FD26DDAC530068FB82 /* ButtonsStartStopResetView.swift in Sources */,
 				4D24B4E526C285520016A182 /* MatrixManager.swift in Sources */,
 				4D24B4E326C274B50016A182 /* Matrix.swift in Sources */,
+				4DA1A3FF26DDAF220068FB82 /* TextFieldAndAddBtnView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
