@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct TextFieldAndAddBtnView: View {
+    
     @EnvironmentObject var matrix: MatrixManager
+    
     var body: some View {
         HStack {
             TextField("format 1.1.2.2.3.3", text: $matrix.addedPoints)

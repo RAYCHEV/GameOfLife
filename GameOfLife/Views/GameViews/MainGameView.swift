@@ -8,14 +8,7 @@ struct MainGameView: View {
         
     var body: some View {
         VStack{
-            ScrollView() {
-                
-                ScrollView(.horizontal){
-                    ZStack {
-                        Text("\(matrix.dysplayedString)")
-                    }
-                }
-            }
+            DysplayedMatrixView()
             ButtonsStartStopResetView()
             
             TextFieldAndAddBtnView()

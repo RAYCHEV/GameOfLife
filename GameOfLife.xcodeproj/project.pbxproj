@@ -15,6 +15,7 @@
 		4D24B4E526C285520016A182 /* MatrixManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24B4E426C285520016A182 /* MatrixManager.swift */; };
 		4DA1A3FD26DDAC530068FB82 /* ButtonsStartStopResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */; };
 		4DA1A3FF26DDAF220068FB82 /* TextFieldAndAddBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1A3FE26DDAF220068FB82 /* TextFieldAndAddBtnView.swift */; };
+		4DA1A40126DDB1140068FB82 /* DysplayedMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1A40026DDB1140068FB82 /* DysplayedMatrixView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4D24B4E426C285520016A182 /* MatrixManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixManager.swift; sourceTree = "<group>"; };
 		4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsStartStopResetView.swift; sourceTree = "<group>"; };
 		4DA1A3FE26DDAF220068FB82 /* TextFieldAndAddBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAndAddBtnView.swift; sourceTree = "<group>"; };
+		4DA1A40026DDB1140068FB82 /* DysplayedMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DysplayedMatrixView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				4D213D0726C14AC200B22FE5 /* MainGameView.swift */,
 				4DA1A3FC26DDAC530068FB82 /* ButtonsStartStopResetView.swift */,
 				4DA1A3FE26DDAF220068FB82 /* TextFieldAndAddBtnView.swift */,
+				4DA1A40026DDB1140068FB82 /* DysplayedMatrixView.swift */,
 			);
 			path = GameViews;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				4D24B4E526C285520016A182 /* MatrixManager.swift in Sources */,
 				4D24B4E326C274B50016A182 /* Matrix.swift in Sources */,
 				4DA1A3FF26DDAF220068FB82 /* TextFieldAndAddBtnView.swift in Sources */,
+				4DA1A40126DDB1140068FB82 /* DysplayedMatrixView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
